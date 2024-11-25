@@ -17,7 +17,7 @@ packages:
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
   gitUsername: kvv
-  gitBranch: main
+  gitBranch: one_service
 services:
 - serviceName: project.siqa_testpreprod.integrations:FlowTesT
   packages:
