@@ -7,12 +7,6 @@ packages:
   gitUrl: https://github.com/siqagituser
   gitUsername: siqagituser
   gitBranch: main
-- name: SIQA_OriginTest_OnPremAssets
-  version: "1.0"
-  gitServerName: siqagituser
-  gitUrl: https://github.com/vijetadixit
-  gitUsername: siqagituser
-  gitBranch: Test
 - name: TPP_services_in_FCS
   gitServerName: SIQA_kvv_wm_io
   gitUrl: https://github.webmethods.io/kvv
