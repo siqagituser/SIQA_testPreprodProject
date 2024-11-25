@@ -8,22 +8,86 @@ packages:
   gitUsername: siqagituser
   gitBranch: main
 - name: SIQA_OriginTest_OnPremAssets
+  version: "1.0"
   gitServerName: siqagituser
   gitUrl: https://github.com/vijetadixit
   gitUsername: siqagituser
   gitBranch: Test
+services:
+- serviceName: project.siqa_testpreprod.integrations:FlowTesT
+  packages:
+  - name: SIQA_testPreprodProject
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:ComplexFS
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:Basic_Flow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.math:divideInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:subtractInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.math:multiplyIntList
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: Basics_1:mapservice
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Basics_1:TryCatch
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: Map_1:TestFlow
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: REST_1_1.CurrentDateAndTime:_get
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
+- serviceName: pub.date:getCurrentDate
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.string:objectToString
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2015
+- serviceName: SOAP_1_1:showDateAndTime
+  packages:
+  - name: SIQA_OriginTest_OnPremAssets
+    version: "1.0"
 configurationVariables:
   jdbc.jdbcTestPool.waitingThread: "0"
   jdbc.jdbcTestPool.minConns: "0"
-  jdbc.jdbcTestPool.snoopenabled: "false"
   jdbc.jdbcTestPool.expireTime: "60000"
   jdbc.jdbcTestPool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/jdbcTestPool.log;ddtdbg.ProtocolTraceShowTime=true
+  jdbc.jdbcTestPool.maxConns: "10"
+  jdbc.jdbcTestPool.userid: root
+  jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
+  jdbc.jdbcTestPool.spyenabled: "false"
+  jdbc.jdbcTestPool.snoopenabled: "false"
   jdbc.jdbcTestPool.password: "{AES}er+I3U8nDVm8F4DBRST1+A=="
   jdbc.jdbcTestPool.spyparms: SpyAttributes=(log=(file)logs/spy/jdbcTestPool.log;logTName=yes;timestamp=yes)
   jdbc.jdbcTestPool.dbURL: jdbc:mysql://mysql.test.local:3306/webm
   jdbc.jdbcTestPool.poolThreshold: "0"
-  jdbc.jdbcTestPool.maxConns: "10"
-  jdbc.jdbcTestPool.userid: root
-  jdbc.jdbcTestPool.driverAlias: MySQL Database Java Connector Driver
   jdbc.jdbcTestPool.useSSL: "false"
-  jdbc.jdbcTestPool.spyenabled: "false"
